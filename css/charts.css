@@ -1,0 +1,28 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+canvas {
+    max-height: 300px;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* 1 colonne pour 2 cartes */
+        gap: 1rem;
+    }
+
+    /* Masquer les 2 premières cartes */
+    .dashboard-grid > .card:nth-child(1),
+    .dashboard-grid > .card:nth-child(2) {
+        display: none;
+    }
+}

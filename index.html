@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="app-title">OT Manager</title>
+    <link rel="icon" type="image/png" href="assets/icon-192.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/tutorial.css">
+</head>
+
+<body data-theme="light">
+    <div id="app">
+        <aside id="sidebar" class="sidebar">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="OT Manager" onerror="this.style.display='none'">
+                <h2 id="app-name">OT Manager</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-item active" data-route="home">
+                    <span>Accueil</span>
+                </a>
+                <a href="#ot-list" class="nav-item" data-route="ot-list">
+                    <span>Ordres de Travail</span>
+                </a>
+                <a href="#expenses" class="nav-item" data-route="expenses">
+                    <span>Dépenses</span>
+                </a>
+                <a href="#reports" class="nav-item" data-route="reports">
+                    <span>Rapports</span>
+                </a>
+                <a href="#settings" class="nav-item" data-route="settings">
+                    <span>Paramètres</span>
+                </a>
+                <button id="logout-btn" class="nav-item" data-route="logout">
+                    <span>Déconnexion</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="btn-icon">🌙</button>
+            </div>
+        </aside>
+
+        <div class="top-banner" id="top-banner"></div>
+
+        <main id="content" class="main-content">
+            <div id="view-container"></div>
+        </main>
+    </div>
+
+    <div id="demo-banner" class="demo-banner hidden">
+        <p>Mode DÉMO - Limité à 15 OT. <a href="#settings">Activez la version Pro</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
